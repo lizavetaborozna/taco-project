@@ -5,14 +5,13 @@ import com.project.taco.tacoproject.model.Taco;
 import com.project.taco.tacoproject.model.TacoOrder;
 import com.project.taco.tacoproject.model.Type;
 import com.project.taco.tacoproject.repository.IngredientRepository;
-import com.project.taco.tacoproject.repository.JdbcIngredientRepository;
-import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 

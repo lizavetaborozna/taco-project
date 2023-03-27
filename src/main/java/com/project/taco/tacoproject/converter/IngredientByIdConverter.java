@@ -1,19 +1,18 @@
 package com.project.taco.tacoproject.converter;
 
 import com.project.taco.tacoproject.model.Ingredient;
-import com.project.taco.tacoproject.repository.JdbcIngredientRepository;
+import com.project.taco.tacoproject.repository.IngredientRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 public class IngredientByIdConverter implements Converter<String, Ingredient> {
 
-    private final JdbcIngredientRepository ingredientRepository;
+    private final IngredientRepository ingredientRepository;
 
-    public IngredientByIdConverter(JdbcIngredientRepository ingredientRepository) {
+    @Autowired
+    public IngredientByIdConverter(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 
